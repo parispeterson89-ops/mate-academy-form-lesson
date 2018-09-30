@@ -33,6 +33,8 @@ At least one field should have default value.
 At least one field should have placeholder value.
 At least one field should has disabled autocomplete.
 
+The final solution should be hosted on Github Pages and should show Success page after submit.
+
 ## How this app is working
 
 Simple request/response nodejs app with Pug and Express. The app hosted in [heroku](https://mate-academy-form-lesson.herokuapp.com)
