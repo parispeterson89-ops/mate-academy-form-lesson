@@ -36,3 +36,12 @@ At least one field should has disabled autocomplete.
 ## How this app is working
 
 Simple request/response nodejs app with Pug and Express. The app hosted in [heroku](https://mate-academy-form-lesson.herokuapp.com)
+
+How to run:
+ -  install heroku
+ - `npm i`
+ - `heroku local web`
+
+Full guide: https://devcenter.heroku.com/articles/getting-started-with-nodejs
+
+To push changes on production do `git push heroku master`
