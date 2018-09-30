@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title Form Example
+    body
+        h1 Form Example
+        form(action=formAction method="POST")
+            div
+                label
+                    span Surname
+                    input(type="text" name="surname")
+
+            div
+                label
+                    span Given Name
+                    input(type="text" name="givenname")
+            button Submit

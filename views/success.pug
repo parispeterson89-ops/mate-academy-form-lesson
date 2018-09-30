@@ -1,0 +1,12 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title Success
+    body
+        h1 💪 you create your first working html form 🚀
+        dl
+            each fieldPair in fields
+                div
+                    dt(style="display: inline;")= fieldPair[0] + ': '
+                    dt(style="display: inline;")= fieldPair[1]
