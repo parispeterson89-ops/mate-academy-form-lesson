@@ -29,7 +29,7 @@ Also form should has textarea ans select elements.
 Every field should has label which focus the input by click.
 Every field should has name attribute.
   
-Every field should has at least one validation - required, min, max, minlength, maxlength, etc
+You should use every of this attribute at least one time - required, min, max, minlength, maxlength, etc
 At least one field should have default value.
 At least one field should have placeholder value.
 At least one field should has disabled autocomplete.
