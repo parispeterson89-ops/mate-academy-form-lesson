@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const port = process.env.PORT || 5000;
 const app = express();
 
@@ -32,11 +33,7 @@ app.post(createApplicationEndpoint, (request, response) => {
   manageResponse(request, response);
 });
 
-app.post(createApplicationEndpointForEverybody, (request, response) => {
-  response.set({
-    'Access-Control-Allow-Origin': '*',
-  });
-
+app.post(createApplicationEndpointForEverybody, cors(), (request, response) => {
   manageResponse(request, response);
 });
 
