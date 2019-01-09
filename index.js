@@ -4,6 +4,7 @@ const port = process.env.PORT || 5000;
 const app = express();
 
 const createApplicationEndpoint = '/create-application';
+const createApplicationEndpointForEverybody = '/create-application-for-everybody';
 
 app.set('views', './views');
 app.set('view engine', 'pug');
@@ -17,7 +18,7 @@ app.get('/', (request, response) => {
   });
 });
 
-app.post(createApplicationEndpoint, (request, response) => {
+const manageResponse = (request, response) => {
   if (isFormValid(request.body)) {
     response.render('success', {
       fields: Object.keys(request.body).map((key) => [key, request.body[key]])
@@ -25,6 +26,18 @@ app.post(createApplicationEndpoint, (request, response) => {
   } else {
     response.render('fail');
   }
+};
+
+app.post(createApplicationEndpoint, (request, response) => {
+  manageResponse(request, response);
+});
+
+app.post(createApplicationEndpointForEverybody, (request, response) => {
+  response.set({
+    'Access-Control-Allow-Origin': '*',
+  });
+
+  manageResponse(request, response);
 });
 
 app.listen(port, () => console.log(`Form app listening on port ${port}!`));
